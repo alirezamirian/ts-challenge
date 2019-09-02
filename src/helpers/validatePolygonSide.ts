@@ -1,3 +1,8 @@
+/**
+ * Validates the length of one side of a polygon. Checks if it's a positive number and it's not greater than the
+ * sum of the length of the other sides of the polygon.
+ * @returns validation error message, if invalid. Otherwise, undefined.
+ */
 export function validatePolygonSide(
   side: number,
   otherSides: number[]
@@ -9,6 +14,6 @@ export function validatePolygonSide(
     return "Each side must be greater than zero";
   }
   if (side >= otherSides.reduce((soFar, someSide) => soFar + someSide, 0)) {
-    return "One side cannot be greater than the sum of other sides";
+    return "One side cannot be greater than the sum of the other sides";
   }
 }

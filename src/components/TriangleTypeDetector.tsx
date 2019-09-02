@@ -3,15 +3,15 @@ import { InlineForm } from "./InlineForm.styled";
 import { PolygonSidesEditor } from "./PolygonSidesEditor";
 import { TriangleTypeResult } from "./TriangleTypeResult";
 
-interface Props {}
-export function TriangleTypeDetector(props: Props) {
+/**
+ * Provides UI for getting the lengths of triangle's three sides and then shows the type of the triangle
+ */
+export function TriangleTypeDetector() {
   const [sides, setSides] = useState([3, 3, 3]);
   return (
     <>
       <InlineForm>
-        <div style={{ display: "flex" }}>
-          <PolygonSidesEditor sides={sides} onChange={setSides} />
-        </div>
+        <PolygonSidesEditor sides={sides} onChange={setSides} />
       </InlineForm>
       <TriangleTypeResult
         firstSide={sides[0]}

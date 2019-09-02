@@ -5,9 +5,6 @@ export type TriangleType = "Equilateral" | "Isosceles" | "Scalene";
 /**
  * Given the lengths of a triangle's sides, returns the type of the triangle. If these side lengths can't shape a
  * triangle, returns null
- * @param firstSide
- * @param secondSide
- * @param thirdSide
  */
 export function getTriangleType(
   firstSide: number,

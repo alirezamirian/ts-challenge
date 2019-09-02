@@ -8,12 +8,17 @@ interface Props {
   secondSide: number;
   thirdSide: number;
 }
+
+/**
+ * Given the length of triangle's three sides, displays triangle type or shows an error message if it's not possible
+ * to have a triangle with these numbers as the length of the sides.
+ */
 export function TriangleTypeResult({
   firstSide,
   secondSide,
   thirdSide
 }: Props) {
-  let triangleType = getTriangleType(firstSide, secondSide, thirdSide);
+  const triangleType = getTriangleType(firstSide, secondSide, thirdSide);
   return (
     <>
       {triangleType ? (
