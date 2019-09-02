@@ -1,9 +1,9 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
-import * as serviceWorker from "./serviceWorker";
-import "@tradeshift/tradeshift-ui";
-import "@tradeshift/tradeshift-ui/ts.css";
+import '@tradeshift/tradeshift-ui';
+import '@tradeshift/tradeshift-ui/ts.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
 
 (window as any).ts.ui.ready(() => {
   ReactDOM.render(<App />, document.getElementById("root"));
